@@ -5,12 +5,42 @@
 }
 
 body {
-  background: black;
-  overflow: hidden;
+  background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  width: 100vw;
+  overflow: hidden;
+  position: relative;
 }
 
-canvas {
-  display: block;
+#heartCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.text-circle {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  animation: spin 15s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-circle p {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
